@@ -1,11 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudarshana</title>
+    <title>Team Sudarshana</title>
+
+
+    <link rel="stylesheet" href="./style.css">
+    
 </head>
+
 <body>
-    <h1>Welcome to Sudarshana Prototype</h1>
+    <div class="team-section">
+        <div class="content">
+            <h1>Team <span>Sudarshana</span></h1>
+            <p>Develope end-to-end platform which will enhance, monitor and manage Research, IPR, Innovation, and Start-ups
+                in Gujarat State</p>
+            <div class="buttonsapply">
+                <button id="prototypeBtn" class="prototype-btn">Prototype</button>
+                <a href='https://drive.google.com/drive/folders/18nltWxFdrqoI-t0BzkhYkFIXdo2g_rIT?usp=drive_link' class="fileButton prototype-btn">Files</a>
+            </div>
+        </div>
+        <div class="image-section">
+            <img src="./assets/sudarshana.jpg" alt="Team Image" />
+        </div>
+    </div>
+
+    <div id="slideshowModal" class="modal">
+        <!-- <span class="hideModel">&#10005;</span> -->
+        <div class="modal-content">
+            <div class="slideshow-container">
+
+                <div class="mySlides">
+                    <div class="slide-image">
+                        <img src="./assets/registration.png" alt="Registration">
+                    </div>
+                    <div class="slide-text">
+                        <h2>Registration</h2>
+                        <p>Entrepreneurs and researchers will register their startup ideas and research projects by
+                            completing a comprehensive form that captures all essential information.</p>
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="slide-image">
+                        <img src="./assets/patent.webp" alt="IPR Status">
+                    </div>
+                    <div class="slide-text">
+                        <h2>IPR Status Tracking using API</h2>
+                        <p>It enables the management and tracking of the status of startups and research projects that have applied for patents by using the API of "Official website of Intellectual Property India".</p>
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="slide-image">
+                        <img src="./assets/policy1.jpg" alt="Policy Making">
+                    </div>
+                    <div class="slide-text">
+                        <h2>Policy Making Using Data Analytics</h2>
+                        <p>By analyzing the data collected from entrepreneurs and researchers post-patent grant, policymakers can use data analytics to craft informed, universal policies that address common trends and needs, ensuring more effective and broadly applicable regulations.</p>
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="slide-image">
+                        <img src="./assets/funding.jpg" alt="AI-driven Funding Recommendations">
+                    </div>
+                    <div class="slide-text">
+                        <h2>AI-driven Funding Recommendations</h2>
+                        <p>Different government and private agencies can allocate funds to startups and research projects based on AI-driven recommendations. This involves training models to analyze existing policies, business models, trends in startups, and innovations in research. By leveraging these insights, agencies can make informed funding decisions that align with current trends and potential impact.</p>
+                    </div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById("slideshowModal");
+        
+        var btn = document.getElementById("prototypeBtn");
+
+        btn.onclick = function () {
+            modal.style.display = "flex";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
 </body>
+
 </html>
