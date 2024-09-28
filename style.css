@@ -12,7 +12,7 @@
 #wrapper {
     background-color: #e9e9f9;
     width: 100%;
-    padding: 50px 0;
+    padding: 50px 15px;
 }
 
 .team-section {
@@ -21,12 +21,13 @@
     flex-wrap: wrap-reverse;
     justify-content: space-evenly;
     align-items: center;
-    padding: 50px 0;
+    gap: 20px;
+    padding: 50px 15px;
 }
 
 .team-section .content {
     width: 50%;
-    min-width: 375px;
+    min-width: 350px;
 }
 
 .team-section .content h1 {
@@ -179,10 +180,6 @@
     .team-section .image-section img {
         width: 350px;
     }
-    .team-section .content{
-        width: 375px;
-    }
-
     .team-section .content p{
         font-size: 1rem;
     }
