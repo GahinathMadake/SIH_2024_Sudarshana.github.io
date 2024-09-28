@@ -25,19 +25,19 @@
 }
 
 .team-section .content {
-    max-width: 50%;
-    margin: 20px;
+    width: 50%;
+    min-width: 375px;
 }
 
 .team-section .content h1 {
-    font-size: 50px;
+    font-size: 3rem;
     margin: 20px 0;
     font-family: 'Garamond';
 }
 
 .team-section .content h1 span {
+    font-size: 3rem;
     color: #27408b;
-    font-size: 50px;
     font-family: 'Garamond';
 }
 
@@ -51,9 +51,9 @@
 .team-section .prototype-btn{
     background-color: #ff8c00;
     color: white;
-    padding: 10px 30px;
+    text-decoration: none;
+    padding: 8px 20px;
     border: none;
-    cursor: pointer;
     border-radius: 5px;
     font-size: 25px;
     margin: 10px 8px;
@@ -64,19 +64,15 @@
     background-color: #f47920;
 }
 
-.team-section .fileButton{
-    text-decoration: none;
-}
-
 .team-section .image-section img {
-    margin-top: 60px;
     width: 400px;
     height: auto;
     border-radius: 20px;
 }
 .content .buttonsapply{
     display: flex;
-    gap: 50px;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .modal {
@@ -174,6 +170,23 @@
 
 
 
+@media screen and (max-width:700px){
+    
+.team-section .content h1, .team-section .content h1 span{
+    font-size: 2rem;
+}
+
+    .team-section .image-section img {
+        width: 350px;
+    }
+    .team-section .content{
+        width: 375px;
+    }
+
+    .team-section .content p{
+        font-size: 1rem;
+    }
+}
 
 
 
